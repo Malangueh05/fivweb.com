@@ -1,0 +1,1138 @@
+/* Les styles généraux de la page (qu'on retrouve dans toutes/plusieurs sections de la page) */
+
+/* les polices personnalisées */
+
+
+@font-face
+{
+	font-family: 'Roboto';
+	src: url('fonts/Roboto-Regular.ttf') format('truetype'),
+		 url('fonts/Roboto-BlackItalic.ttf') format('truetype'),
+		 url('fonts/Roboto-Bold.ttf') format('truetype'),
+		 url('fonts/Roboto-BoldItalic.ttf') format('truetype'),
+		 url('fonts/Roboto-Italic.ttf') format('truetype'),
+		 url('fonts/Roboto-Light.ttf') format('truetype'),
+		 url('fonts/Roboto-LightItalic.ttf') format('truetype'),
+		 url('fonts/Roboto-Medium.ttf') format('truetype'),
+		 url('fonts/Roboto-MediumItalic.ttf') format('truetype'),
+		 url('fonts/Roboto-Black.ttf') format('truetype'),
+		 url('fonts/Roboto-Thin.ttf') format('truetype'),
+		 url('fonts/Roboto-ThinItalic.ttf') format('truetype');
+	
+}
+
+@font-face
+{
+	font-family: 'Roboto';
+	src: url('fonts/Roboto-Regular.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+	
+}
+
+@font-face
+{
+	font-family: 'Roboto';
+	src: url('fonts/Roboto-Bold.ttf') format('truetype');
+		font-weight: bold;
+		font-style: normal;
+
+}
+		 
+@font-face
+{
+	font-family: 'Roboto';
+	src: url('fonts/Roboto-Italic.ttf') format('truetype');
+		font-style: italic;
+		font-weight: normal;
+}
+
+body
+{
+	font-family: 'Roboto', serif;
+	margin: 0;
+	color: #65696e;
+}
+
+nav
+{
+	width: 30%;
+}
+
+section
+{
+	padding-top: 6%;
+}
+
+a
+{
+	text-decoration: none;
+	color: #65696e;
+}
+
+h1,
+h2,
+h3,
+h4
+{
+	color: #333;
+}
+
+h3
+{
+	width: 50%;
+	padding-top: 2%;
+	text-align: center;
+	margin: auto;
+	font-size: 2.5em;
+	font-family: Roboto, 'comic sans sm', papyrus, serif;
+}
+
+h4
+{
+	font-weight: bold;
+}
+
+p
+{
+	text-align: justify;
+}
+
+strong
+{
+	color: #009;
+}
+
+.trait 
+{
+	border: 1px solid #009;
+    height: 0;
+    width: 154px;
+    margin: auto;
+    margin-top: 28px;
+    position: relative;
+}
+
+.trait::after
+{
+	content: " ";
+	width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #900;
+    position: absolute;
+    top: -10px;
+    left: 45%;
+}
+
+.trait + p
+{
+	width: 50%;
+	text-align: center;
+	margin: auto;
+	margin-top: 40px;
+}
+
+figure
+{
+	margin: 0px;
+}
+
+img
+{
+	width: 100%;
+}
+
+
+
+
+/* Les styles particuliers (par parties/section précise de la page) */
+
+/* La partie 'header' */
+
+header
+{
+	display: flex;
+	justify-content: space-around;
+	padding-top: 2%;
+	padding-bottom: 1%;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	background-color: white;
+	width: 100%;
+	box-shadow: 3px 3px 10px #5cadd3;
+}
+
+.logo_box
+{
+    display: flex;
+}
+
+.logo
+{
+	display: none;
+}
+
+.nom_logo a
+{
+    /*width: 45%;*/
+    margin: auto;
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #009;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.nom_logo:hover
+{
+	cursor: pointer;
+}
+
+.menu
+{
+	display: flex;
+	padding-left: 0;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0px;
+	height: 57px;
+}
+
+.menu_element
+{
+	list-style: none;
+	width: 25%;
+	text-align: center;
+	padding: 15px;
+}
+
+.menu_element:hover /* L'effet au survol des éléments du menu principal */
+{
+	font-weight: bold;
+	border-top: 3px #009 solid;
+	cursor: pointer;
+}
+
+.menu_element:hover a
+{
+	color: #009;
+	font-size: 1.1em;
+}
+
+.menu_element:active /* L'effet à la sélection des éléments du menu principal */
+{
+	border-top: 5px #FFF solid;
+	box-shadow: 2px 2px 3px rgba(0, 0, 9, 0.5) inset;
+}
+
+.grande_illustration
+{
+	position: relative;
+	overflow: hidden;
+}
+
+.slide /*Le conteneur de chaque image du diaporama du hero */
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px;
+    margin: auto;
+}
+
+.image_entete_box
+{
+	width: 100%;
+}
+
+.text_on_picture
+{
+	position: absolute;
+    top: 35%;
+    left: 10%;
+    width: 35%;
+}
+
+.text_on_picture h1
+{
+	color: white;
+	font-size: 2em;
+	font-family: Roboto, serif;
+}
+
+.text_on_picture strong
+{
+	color: #5cadd3;
+}
+
+.text_on_picture h2
+{
+	color: white;
+	font-size: 1em;
+	font-family: 'Roboto', serif;
+	font-weight: normal;
+}
+
+button,
+.submit_button
+{
+	background-color: #5cadd3;
+	font-family: 'Roboto', serif;
+	color: white;
+	font-weight: normal;
+	height: 45px;
+	font-size: 1.3em;
+	border: 0px;
+    border-radius: 5px;
+    box-shadow: 0px -5px 5px inset #4485a2;
+}
+
+.main_button
+{
+	padding: 10px 25px;
+	font-size: 1.1em;
+}
+
+button:hover
+{
+	cursor: pointer;
+}
+
+.text_on_picture a
+{
+	color: white;
+}
+
+.fa-chevron-left
+{
+    padding: 1%;
+    border-radius: 0 50% 50% 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 55%;
+    left: -0.5%;
+    color: white;
+}
+
+.fa-chevron-right
+{
+    padding: 1%;
+    border-radius: 50% 0 0 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 55%;
+    right: -0.5%;
+    color: white;
+    overflow: hidden;
+}
+
+
+
+
+/* La partie 'nos services' */
+
+.nos_services_block
+{
+	display: flex;
+    margin-top: 60px;
+}
+
+.skill_slide_container
+{
+	display: flex;
+	align-items: center;
+	width: 50%;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.skill_slide /* Le conteneur de chaque image du diaporama des compétences */
+{
+	display: none;
+}
+
+.nos_services_aside
+{
+	width: 60%;
+	margin-top: 5%;
+}
+
+.nos_services_article
+{
+	display: flex;
+    justify-content: space-between;
+}
+
+.article_div
+{
+    width: 80%;
+}
+
+.article_div p
+{
+	width: 65%;
+}
+
+.UX_design_graph,
+.UI_design_graph,
+.SEO_graph /* les cercles des icones des articles UX design, UI design et SEO */
+{
+	position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    border: 1px solid #009;
+    border-radius: 50%;
+}
+
+.UX_design_graph::after,
+.UI_design_graph::after,
+.SEO_graph::after /* les petits ronds sur les cercles des icones du UX design, UI design et SEO */
+{
+	content: " ";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #900;
+    position: absolute;
+    top: 40%;
+    left: 90%;
+}
+
+.fa-chart-line,
+.fa-cubes,
+.fa-chart-pie /* les icones dans chacun des cercles du UX design, UI design et SEO */
+{
+	font-size: 2em;
+    position: relative;
+    top: 23px;
+    left: 24px;
+    color: #5cadd3;
+}
+
+/* La partie 'nos projets' */
+
+.nav_projet
+{
+	display: none;
+	margin: auto;
+	margin-top: 50px;
+}
+
+.menu-b
+{
+	background-color: #e5e5e5;
+	display: flex;
+	padding-left: 0;
+	margin: 0;
+	height: 50px;
+	border-radius: 5px;
+	display: none;
+}
+
+.menu-b_element_first,
+.menu-b_element_midle,
+.menu-b_element_last
+{
+	list-style: none;
+	width: 25%;
+	text-align: center;
+	padding: 15px;
+	position: relative;
+}
+
+.menu-b_element_first /* Premier élément du menu de la section nos projets */
+{
+	background-color: #5cadd3;
+	box-shadow: 0px 3px 0px #468cad;
+	height: 17px;
+	border-radius: 5px 0px 0px 5px;
+}
+
+.menu-b_element_first a 
+{
+	color: white;
+}
+
+.menu-b_element_first .arrow-down
+{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #468cad;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+}
+
+.menu-b_element_first:hover, /* L'effet au survol du premier élément du menu de la section nos projets ainsi que lorsqu'il est actif */
+{
+	background-color: #5cadd3;
+	box-shadow: 0px 3px 0px #468cad;
+	height: 17px;
+	border-radius: 5px 0px 0px 5px;
+	cursor: pointer;
+}
+
+.menu-b_element_midle:hover/* L'effet au survol des éléments centraux du menu de la section nos projets */
+{
+	background-color: #5cadd3;
+	box-shadow: 0px 3px 0px #468cad;
+	height: 17px;
+	cursor: pointer;
+}
+
+.menu-b_element_last:hover/* L'effet au survol du dernier élément du menu de la section nos projets */
+{
+	background-color: #5cadd3;
+	box-shadow: 0px 3px 0px #468cad;
+	height: 17px;
+	border-radius: 0px 5px 5px 0px;
+	cursor: pointer;
+}
+
+.menu-b_element_first:hover .arrow-down,
+.menu-b_element_midle:hover .arrow-down,
+.menu-b_element_last:hover .arrow-down
+{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #468cad;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+}
+
+.menu-b_element_first:hover a,
+.menu-b_element_midle:hover a,
+.menu-b_element_last:hover a
+{
+	color: white;
+}
+
+.projet
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: stretch;
+	width: 95%;
+	margin: auto;
+	margin-top: 50px;
+}
+
+.projet_element
+{
+	width: calc(30% - 0px);
+    margin: 20px;
+    position: relative;
+}
+
+.projet_image
+{
+	box-shadow: 1px 1px 3px grey;
+}
+
+figcaption
+{
+	display: none;
+}
+
+.fa-eye
+{
+	border: 2px white solid;
+    background-color: #5cadd3;
+    padding: 4%;
+    border-radius: 50%;
+    position: absolute;
+    top: -34%;
+    right: 5%;
+}
+
+figcaption strong
+{
+	color: white;
+}
+
+.projet_element:hover
+{
+    cursor: pointer;
+}
+
+.projet_element:hover figcaption
+{
+	display: block;
+	background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 58%;
+    width: calc(100% - 10px);
+    height: 35%;
+    color: white;
+    font-size: 0.9em;
+    padding-top: 2%;
+    padding-left: 10px;
+}
+/*
+.projet_element:hover .fa-eye
+{
+    padding: 5%;
+}
+*/
+
+/* La partie 'contact' (la carte et le formulaire) */
+
+.contact
+{
+	min-height: 835px;
+    position: relative;
+}
+
+iframe
+{
+	background-color: #97c6f0;
+	border: 0;
+	display: block;
+    width: 100%;
+    height: -webkit-fill-available;
+    min-height: inherit;
+    opacity: 0.9;
+}
+
+.filter
+{
+	background-color: #97c6f0;
+    opacity: 0.2;
+    width: 100%;
+    height: 92%;
+    position: absolute;
+    top: 8%;
+}
+
+.contact:hover .filter
+{
+	display: none;
+}
+
+.contact h4
+{
+	font-size: 2em;
+	font-weight: bold;
+	font-family: Roboto, serif;
+	margin: 10px 10px 10px 0px;
+}
+
+.contact p
+{
+	font-family: Roboto, serif;
+	color: #64686d;
+}
+
+.contact aside
+{
+	width: 22%;
+	padding-left: 1%;
+	background-color: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	top: 20%;
+	right: 10%;
+}
+
+.contact textarea
+{
+	width: 92%;
+	height: 200px;
+}
+
+input,
+textarea
+{
+	margin-bottom: 15px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	width: 92%;
+	font-family: roboto, serif;
+	font-size: 1.2em;
+}
+
+textarea + input /* input qui suit textarea */
+{
+	background-color: #5cadd3;
+	width: 35%;
+	text-align: center;
+	color: white;
+}
+
+.submit_button
+{
+	cursor: pointer;
+	background-color: #5cadd3;
+	width: 35%;
+	text-align: center;
+	color: white;
+}
+
+/* Les breackpoints */
+
+@media all and (max-width: 1024px) /* Pour les écrans d'au plus 1024px de large */
+{
+	.text_on_picture
+	{
+   		width: 45%;
+   		transform: translate(-5%, -5%);
+	}
+
+	section
+	{
+    	padding-top: 9%;
+	}
+
+	/* La partie 'nos services' */
+
+	.image_ordi_box
+	{
+	    margin: 0;
+	}
+
+	/* La partie 'nos projets' */
+
+	.projet
+	{
+    	justify-content: center;
+	}
+
+	.nav_projet
+	{
+	    width: 40%;
+	}
+
+	.projet_element
+	{
+    	width: calc(33% - 20px);
+    	margin: 10px;
+	}
+
+	.projet_element:hover
+	{
+    	width: calc(33% - 20px);
+    	margin: 10px;
+	}
+
+	.projet_element:hover figcaption
+	{
+    	width: calc(100% - 5px);
+    	padding-left: 5px;
+	}
+
+	.projet_element:hover .fa-eye
+	{
+    	padding: 4%;
+	}
+
+	/* La partie 'contact' */
+
+	.filter
+	{
+		top: 10%;
+	}
+
+	.contact aside
+	{
+	    width: 35%;
+    	height: 67%;
+	}
+}
+
+@media all and (max-width: 768px) /* Pour les écrans d'au plus 768px de large */
+{
+
+	nav
+	{
+		width: 46%;
+	}
+
+	section
+	{
+		padding-top: 11%;
+	}
+
+	h3
+	{
+		font-size: 2em;
+	}
+
+	.trait + p
+	{
+		width: 80%;
+	}
+
+	.text_on_picture
+	{
+		width: 55%;
+    	transform: translate(-10%, -10%);
+	}
+
+	.text_on_picture h1
+	{
+		font-size: 1.7em;
+	}
+
+	button, .submit
+	{
+		height: auto;
+    	font-size: 1em;
+	}
+
+/* La partie 'nos services' */
+
+	.trait 
+	{
+	   	width: 15%;
+    	margin: auto;
+    	margin-top: 2%;
+	}
+
+	.trait::after
+	{
+		width: 12px;
+    	height: 12px;
+    	top: -6px;
+    	left: 47%;
+	}
+
+	.image_ordi_box
+	{
+	    width: 48%;
+    	margin: 0;
+	}
+
+	.nos_services_aside
+	{
+		width: 60%;
+    	margin-top: 5%;
+    	margin-right: 8%;
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: space-around;
+	}
+
+	.article_div p
+	{
+	    width: 85%;
+    	padding: 0;
+	}
+
+/* les cercles des icones des articles UX design, UI design et SEO */
+
+	.UX_design_graph,
+	.UI_design_graph,
+	.SEO_graph
+	{
+		width: 50px;
+    	height: 50px;
+    	margin-top: 5%;
+	}
+
+/* les petits ronds sur les cercles des icones du UX design, UI design et SEO */
+
+	.UX_design_graph::after,
+	.UI_design_graph::after,
+	.SEO_graph::after
+	{
+		width: 12px;
+    	height: 12px;
+    	top: 36%;
+    	left: 87%;
+	}
+
+/* les icones dans chacun des cercles du UX design, UI design et SEO */
+
+	.fa-chart-line,
+	.fa-cubes,
+	.fa-chart-pie
+	{
+		font-size: 1.5em;
+    	top: 25%;
+    	left: 26%;
+	}
+
+/* La partie 'nos projets' */
+
+	.nav_projet
+	{
+	    width: 43%;
+	}
+
+	.projet_element
+	{
+	    width: calc(33% - 20px);
+	}
+
+
+/* La partie 'contact' (la carte et le formulaire) */
+
+	.filter
+	{
+		top: 9%;
+	}
+
+	.contact h4
+	{
+		font-size: 1.7em;
+	}
+
+	.contact aside
+	{
+		width: 45%;
+    	right: 1%;
+	}
+}
+
+@media all and (max-device-width: 425px) /* Pour les écrans d'au plus 425px de large */
+{
+	body
+	{
+    	font-size: 1.3em;
+	}
+
+	header
+	{
+		display: initial;
+	}
+
+	.logo_box
+	{
+    	width: 50%;
+    	margin: auto;
+	}
+
+	.nav_header
+	{
+    	width: 100%;
+    	margin-top: 5%;
+	}
+
+	.menu
+	{
+    	height: auto;
+	}
+
+	.menu_element
+	{
+    	padding: 0;
+    	font-size: 0.7em;
+	}
+
+	.grande_illustration
+	{
+    	padding-bottom: 10%;
+    	text-align: center;
+	}
+
+	.image_entete_box
+	{
+    	display: none;
+	}
+
+	.fa-chevron-left
+	{
+    	opacity: 0;
+	}
+
+	.fa-chevron-right
+	{
+    	opacity: 0;
+	}
+
+	.text_on_picture
+	{
+		position: initial;
+    	width: 100%;
+    	margin-top: 26%;
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	transform: none;
+	}
+
+	.text_on_picture h1
+	{
+    	color: #65696e;
+    	font-size: 1em;
+    	padding-top: 2%;
+	}
+
+	.text_on_picture h2
+	{
+    	color: #65696e;
+	}
+
+	h3
+	{
+    	padding-top: 0%;
+    	font-size: 1.9em;
+    	width: 100%;
+	}
+
+	.trait
+	{
+    	width: 80px;
+   		margin-top: 10px;
+	}
+
+	.trait::after
+	{
+    	width: 10px;
+    	height: 10px;
+    	top: -5px;
+    	left: 45%;
+	}
+
+	.trait + p
+	{
+    	width: 90%;
+    	text-align: justify;
+	}
+
+	.nos_services,
+	.nos_projets,
+	.contact
+	{
+    	padding-top: 35%;
+    	font-size: 0.7em;
+	}
+
+	.nos_services_block
+	{
+    	display: initial;
+	}
+
+	.image_ordi_box
+	{
+    	padding-top: 10%;
+    	width: 80%;
+    	margin: auto;
+	}
+
+	.nos_services_aside
+	{
+    	width: 100%;
+    	margin: auto;
+	}
+
+	.nos_services_article
+	{
+		display: flex;
+    	justify-content: space-around;
+	}
+
+	.article_div
+	{
+    	width: 65%;
+	}
+
+	.UX_design_graph,
+	.UI_design_graph,
+	.SEO_graph
+	{
+    	width: 50px;
+    	height: 50px;
+    	top: 20px;
+    	left: 25px;
+	}
+
+	.fa-chart-line,
+	.fa-cubes,
+	.fa-chart-pie
+	{
+    	font-size: 1.7em;
+    	top: 13px;
+    	left: 13px;
+	}
+
+	.UX_design_graph::after,
+	.UI_design_graph::after,
+	.SEO_graph::after
+	{
+    	width: 10px;
+    	height: 10px;
+    	top: 40%;
+    	left: 90%;
+	}
+
+	.nav_projet
+	{
+    	margin-top: 10%;
+    	width: 90%;
+	}
+
+	.menu-b_element_first,
+	.menu-b_element_midle,
+	.menu-b_element_last
+	{
+    	font-size: 1.3em;
+    }
+
+	.projet_element
+	{
+    	width: calc(50% - 20px);
+    	margin: 10px;
+    	position: relative;
+	}
+
+	.projet_element:hover
+	{
+    	width: calc(50% - 20px);
+    	margin: 10px;
+    	position: relative;
+	}
+
+	.contact
+	{
+    	padding-top: 26%;
+    	position: relative;
+	}
+
+	.filter 
+	{
+    	top: 12%;
+    	height: 88%;
+	}
+
+	.contact aside
+	{
+		border-radius: 6px 6px;
+    	box-shadow: 3px 3px 20px;
+    	width: 90%;
+    	height: 61%;
+    	margin-bottom: 5%;
+    	left: 5%;
+    	top: 100%;
+	}
+
+	.contact h4
+	{
+		font-size: 1.5em;
+    	margin: 10px 10px 10px 0px;
+	}
+
+	.contact p
+	{
+    	font-size: 1em;
+	}
+
+	input,
+	textarea
+	{
+    	margin-bottom: 3%;
+    	padding: 3%;
+    	width: 92%;
+    	font-size: 1em;
+	}
+}
